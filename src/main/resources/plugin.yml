@@ -1,0 +1,28 @@
+name: DiamondWallet
+version: '${project.version}'
+main: me.shafi.diamondwallet.DiamondWallet
+api-version: "1.21"
+softdepend: [Vault]
+commands:
+  wallet:
+    description: to open wallet
+  walletbal:
+    description: to get value of the diamond
+  wallettop:
+    description: get leaderboard
+permissions:
+  diamondwallet.wallet:
+    description: Allows players to open their own wallet
+    default: true
+  diamondwallet.walletbal:
+    description: Allows players to check their balance
+    default: true
+  diamondwallet.walletbal-others:
+    description: Allows checking other players' balance
+    default: op
+  diamondwallet.wallet-others:
+    description: Allows opening other players' wallets (Admin View)
+    default: op
+  diamondwallet.wallettop:
+    description: Allows viewing the leaderboard
+    default: true
